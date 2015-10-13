@@ -1,7 +1,8 @@
 Package.describe({
   name: "coniel:react-form-handler-material-ui",
   summary: "Material UI inputs for conielo:react-form-handler" ,
-  version: "0.1.0"
+  git: 'https://github.com/coniel/meteor-react-form-handler-material-ui.git',
+  version: "0.1.1"
 });
 
 Package.onUse(function(api) {
