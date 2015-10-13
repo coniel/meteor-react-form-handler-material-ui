@@ -1,5 +1,5 @@
 Package.describe({
-  name: "conielo:react-form-handler-material-ui",
+  name: "coniel:react-form-handler-material-ui",
   summary: "Material UI inputs for conielo:react-form-handler" ,
   version: "0.1.0"
 });
