@@ -2,7 +2,7 @@ Package.describe({
   name: "coniel:react-form-handler-material-ui",
   summary: "Material UI inputs for conielo:react-form-handler" ,
   git: 'https://github.com/coniel/meteor-react-form-handler-material-ui.git',
-  version: "0.1.4"
+  version: "0.1.5"
 });
 
 Package.onUse(function(api) {
@@ -10,9 +10,9 @@ Package.onUse(function(api) {
 
     // Dependencies
     var dependencies = [
-        'react@0.1.10',
+        'react@0.1.13',
         'izzilab:material-ui@0.1.7',
-        'coniel:react-form-handler@0.1.3'
+        'coniel:react-form-handler@0.1.4'
     ];
     api.use(dependencies);
     api.imply(dependencies);
