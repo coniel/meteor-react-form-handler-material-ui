@@ -1,4 +1,4 @@
-var MuiDatePicker = MUI.DatePicker;
+var MUIDatePicker = MUI.DatePicker;
 
 DatePicker = React.createClass({
     propTypes: {
@@ -28,7 +28,7 @@ DatePicker = React.createClass({
     render: function () {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MuiDatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} errorText={this.props.errorText} value={this.state.value} />
+                <MUIDatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} errorText={this.props.errorText} value={this.state.value} />
             </div>
         )
     }

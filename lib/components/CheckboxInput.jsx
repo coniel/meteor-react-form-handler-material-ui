@@ -1,6 +1,6 @@
-Checkbox = MUI.Checkbox;
+var MUICheckbox = MUI.Checkbox;
 
-CheckboxInput = React.createClass({
+Checkbox = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -15,7 +15,7 @@ CheckboxInput = React.createClass({
     render: function() {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <Checkbox ref="checkbox" {...this.props} defaultChecked={this.props.defaultValue} value={this.props.name} label={this.props.floatingLabelText} onCheck={this._onCheck} />
+                <MUICheckbox ref="checkbox" {...this.props} defaultChecked={this.props.defaultValue} value={this.props.name} label={this.props.floatingLabelText} onCheck={this._onCheck} />
             </div>
         )
     }

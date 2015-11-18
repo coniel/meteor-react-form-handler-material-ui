@@ -13,7 +13,13 @@ TextInput = React.createClass({
         FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
     },
     _onChange(event) {
-        FormHandler.inputChanged(this.props.formId, this.props.name, event.nativeEvent.target.value);
+
+        let value = event.nativeEvent.target.value;
+
+        if (this.props.type === "number") {
+            value = parseFloat(value);
+        }
+        FormHandler.inputChanged(this.props.formId, this.props.name, value);
     },
     render: function() {
         return (

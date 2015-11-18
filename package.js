@@ -10,9 +10,9 @@ Package.onUse(function(api) {
 
     // Dependencies
     var dependencies = [
-        'react@0.1.13',
-        'izzilab:material-ui@0.1.7',
-        'coniel:react-form-handler@0.1.4'
+        'react@0.14.1_1',
+        'izzilab:material-ui@0.2.1',
+        'coniel:react-form-handler@0.2.1'
     ];
     api.use(dependencies);
     api.imply(dependencies);
