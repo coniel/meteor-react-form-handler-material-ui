@@ -36,7 +36,6 @@ Select = React.createClass({
                 this.props.allowedValues.map((value) => {
                     options.push({label: value, value: value});
                 });
-                console.log(options);
             } else {
                 console.error("Select input " + this.props.name + " has useAllowedValues but does not have any allowedValues");
             }
