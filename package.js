@@ -20,21 +20,26 @@ Package.onUse(function(api) {
     // Shared files
     api.addFiles([
       'lib/components/TextInput.jsx',
+      'lib/components/TextArea.jsx',
       'lib/components/DatePicker.jsx',
-      'lib/components/SelectInput.jsx',
-      'lib/components/CheckboxInput.jsx',
+      'lib/components/Select.jsx',
+      'lib/components/Checkbox.jsx',
+      'lib/components/RadioButtonGroup.jsx',
+      'lib/components/RadioButton.jsx',
       // Submit buttons
       'lib/components/SubmitButton.jsx',
-      'lib/components/FormActions.jsx',
-      'lib/components/SubmitFAB.jsx'
+      'lib/components/FormActions.jsx'
     ]);
 
     // Exports
     api.export([
       'TextInput',
+      'TextArea',
       'DatePicker',
-      'SelectInput',
-      'CheckboxInput',
+      'Select',
+      'Checkbox',
+      'RadioButtonGroup',
+      'RadioButton',
       'SubmitButton',
       'FormActions',
       'SubmitFAB'

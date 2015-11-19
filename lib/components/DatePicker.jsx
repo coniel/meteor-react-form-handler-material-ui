@@ -28,7 +28,7 @@ DatePicker = React.createClass({
     render: function () {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIDatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} errorText={this.props.errorText} value={this.state.value} />
+                <MUIDatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} floatingLabelText={this.props.label} placeholder={null} errorText={this.props.errorText} value={this.state.value} />
             </div>
         )
     }

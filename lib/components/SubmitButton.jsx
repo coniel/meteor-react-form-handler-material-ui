@@ -4,7 +4,7 @@ SubmitButton = React.createClass({
     render: function() {
         let label = this.props.label;
 		
-		if (ReactFormHandler.i18n) {
+		if (FormHandler.i18n) {
 			label = TAPi18n.__(label);
 		}
 

@@ -1,6 +1,6 @@
 let TextField = MUI.TextField;
 
-TextInput = React.createClass({
+TextArea = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -24,7 +24,7 @@ TextInput = React.createClass({
     render: function() {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <TextField fullWidth={true} onChange={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} floatingLabelText={this.props.label} errorText={this.props.errorText} />
+                <TextField fullWidth={true} onChange={this._onChange} {...this.props} multiLine={true} placeholder={null} hintText={this.props.placeholder} floatingLabelText={this.props.label} errorText={this.props.errorText} />
             </div>
         )
     }
