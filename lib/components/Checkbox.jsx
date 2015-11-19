@@ -1,5 +1,3 @@
-var MUICheckbox = MUI.Checkbox;
-
 Checkbox = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,

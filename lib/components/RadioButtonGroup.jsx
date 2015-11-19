@@ -1,5 +1,3 @@
-MUIRadioButtonGroup = MUI.RadioButtonGroup;
-
 RadioButtonGroup = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,

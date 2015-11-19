@@ -1,8 +1,3 @@
-var {
-    RaisedButton,
-    FlatButton
-    } = MUI;
-
 FormActions = React.createClass({
     render: function() {
         let submitLabel = this.props.label || "actions.submit";

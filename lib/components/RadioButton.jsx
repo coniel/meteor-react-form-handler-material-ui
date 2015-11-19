@@ -1,5 +1,3 @@
-MUIRadioButton = MUI.RadioButton;
-
 RadioButton = React.createClass({
     render: function () {
         return (

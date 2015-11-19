@@ -1,5 +1,3 @@
-var MUIDatePicker = MUI.DatePicker;
-
 DatePicker = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,

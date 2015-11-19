@@ -2,7 +2,14 @@ Package.describe({
   name: "coniel:react-form-handler-material-ui",
   summary: "Material UI inputs for conielo:react-form-handler" ,
   git: 'https://github.com/coniel/meteor-react-form-handler-material-ui.git',
-  version: "0.2.1"
+  version: "0.1.5"
+});
+
+var MUI_VERSION = '0.13.3';
+var EXTERNALIFY_VERSION = "0.1.0";
+Npm.depends({
+    'externalify': EXTERNALIFY_VERSION,
+    'material-ui': MUI_VERSION
 });
 
 Package.onUse(function(api) {
@@ -11,14 +18,16 @@ Package.onUse(function(api) {
     // Dependencies
     var dependencies = [
         'react@0.14.1_1',
-        'izzilab:material-ui@0.2.1',
-        'coniel:react-form-handler@0.2.1'
+        'coniel:react-form-handler@0.2.1',
+        'coniel:react-tap-event-plugin@0.0.3',
+        'cosmos:browserify@0.8.1'
     ];
     api.use(dependencies);
-    api.imply(dependencies);
 
     // Shared files
     api.addFiles([
+      'mui.browserify.options.json',
+      'mui.browserify.js',
       'lib/components/TextInput.jsx',
       'lib/components/TextArea.jsx',
       'lib/components/DatePicker.jsx',

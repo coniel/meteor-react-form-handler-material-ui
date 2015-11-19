@@ -1,5 +1,3 @@
-var RaisedButton = MUI.RaisedButton;
-
 SubmitButton = React.createClass({
     render: function() {
         let label = this.props.label;
