@@ -158,7 +158,7 @@
       "version": "0.13.3",
       "dependencies": {
         "inline-style-prefixer": {
-          "version": "0.5.1",
+          "version": "0.5.4",
           "dependencies": {
             "bowser": {
               "version": "1.0.0"
@@ -170,7 +170,7 @@
                   "version": "1.0.1"
                 },
                 "caniuse-db": {
-                  "version": "1.0.30000366"
+                  "version": "1.0.30000374"
                 },
                 "lodash.memoize": {
                   "version": "2.4.1",
