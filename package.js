@@ -5,7 +5,7 @@ Package.describe({
   version: "0.3.0"
 });
 
-var MUI_VERSION = '0.14.0-rc1';
+var MUI_VERSION = '0.14.1';
 var EXTERNALIFY_VERSION = "0.1.0";
 Npm.depends({
     'externalify': EXTERNALIFY_VERSION,
