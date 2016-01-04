@@ -9,3 +9,4 @@ RaisedButton = require('material-ui/lib/raised-button');
 FlatButton = require('material-ui/lib/flat-button');
 MUISelectField = require('material-ui/lib/select-field');
 MUITextField = require('material-ui/lib/text-field');
+MUIAutoComplete = require('material-ui/lib/auto-complete');

@@ -29,6 +29,7 @@ Package.onUse(function(api) {
       'mui.browserify.options.json',
       'mui.browserify.js',
       'lib/components/TextInput.jsx',
+      'lib/components/AutoCompleteInput.jsx',
       'lib/components/TextArea.jsx',
       'lib/components/DatePicker.jsx',
       'lib/components/Select.jsx',
@@ -43,6 +44,7 @@ Package.onUse(function(api) {
     // Exports
     api.export([
       'TextInput',
+      'AutoCompleteInput',
       'TextArea',
       'DatePicker',
       'Select',
