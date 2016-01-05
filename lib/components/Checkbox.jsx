@@ -13,7 +13,7 @@ Checkbox = React.createClass({
     render: function() {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUICheckbox ref="checkbox" {...this.props} defaultChecked={this.props.defaultValue} value={this.props.name} onCheck={this._onCheck} />
+                <MUIComponents.Checkbox ref="checkbox" {...this.props} defaultChecked={this.props.defaultValue} value={this.props.name} onCheck={this._onCheck} />
             </div>
         )
     }

@@ -23,7 +23,7 @@ SubmitButton = React.createClass({
 
         return (
             <span style={containerStyle}>
-                <RaisedButton  primary={true} {...this.props} label={label} type="submit" style={buttonStyle} />
+                <MUIComponents.RaisedButton  primary={true} {...this.props} label={label} type="submit" style={buttonStyle} />
             </span>
         )
     }

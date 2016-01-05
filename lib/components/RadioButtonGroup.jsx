@@ -12,9 +12,9 @@ RadioButtonGroup = React.createClass({
     },
     render: function () {
         return (
-            <MUIRadioButtonGroup name={this.props.name} defaultSelected={this.props.defaultValue} onChange={this._onChange}>
+            <MUIComponents.RadioButtonGroup name={this.props.name} defaultSelected={this.props.defaultValue} onChange={this._onChange}>
                 {this.props.children}
-            </MUIRadioButtonGroup>
+            </MUIComponents.RadioButtonGroup>
         )
     }
 });

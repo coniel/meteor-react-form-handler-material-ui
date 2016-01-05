@@ -9,7 +9,8 @@ var MUI_VERSION = '0.14.1';
 var EXTERNALIFY_VERSION = "0.1.0";
 Npm.depends({
     'externalify': EXTERNALIFY_VERSION,
-    'material-ui': MUI_VERSION
+    'material-ui': MUI_VERSION,
+    "es6-modules-commonjs": "0.1.3"
 });
 
 Package.onUse(function(api) {
@@ -20,7 +21,7 @@ Package.onUse(function(api) {
         'react@0.14.1_1',
         'coniel:react-form-handler@0.2.1',
         'coniel:react-tap-event-plugin@0.0.3',
-        'cosmos:browserify@0.8.1'
+        'cosmos:browserify@0.9.3'
     ];
     api.use(dependencies);
 

@@ -39,7 +39,7 @@ Select = React.createClass({
 
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUISelectField {...this.props} fullWidth={true} onChange={this._onChange} valueMember="value" displayMember="label" floatingLabelText={this.props.label} hintText={this.props.placeholder} placeholder={null} menuItems={options} errorText={this.props.errorText} value={this.state.value} />
+                <MUIComponents.SelectField {...this.props} fullWidth={true} onChange={this._onChange} valueMember="value" displayMember="label" floatingLabelText={this.props.label} hintText={this.props.placeholder} placeholder={null} menuItems={options} errorText={this.props.errorText} value={this.state.value} />
             </div>
         )
     }

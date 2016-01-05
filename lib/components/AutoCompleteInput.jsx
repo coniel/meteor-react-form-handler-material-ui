@@ -36,7 +36,7 @@ AutoCompleteInput = React.createClass({
 
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIAutoComplete fullWidth={true} autoComplete="off" onUpdateInput={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} dataSource={options} floatingLabelText={this.props.label} errorText={this.props.errorText} />
+                <MUIComponents.AutoComplete fullWidth={true} autoComplete="off" onUpdateInput={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} dataSource={options} floatingLabelText={this.props.label} errorText={this.props.errorText} />
             </div>
         )
     }

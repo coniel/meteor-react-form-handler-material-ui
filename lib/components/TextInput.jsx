@@ -1,3 +1,5 @@
+console.log(MUIComponents);
+
 TextInput = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
@@ -23,7 +25,7 @@ TextInput = React.createClass({
     render: function() {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUITextField fullWidth={true} onChange={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} floatingLabelText={this.props.label} errorText={this.props.errorText} />
+                <MUIComponents.TextField fullWidth={true} onChange={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} floatingLabelText={this.props.label} errorText={this.props.errorText} />
             </div>
         )
     }
