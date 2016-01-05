@@ -1,12 +1,12 @@
 global.React = React;
 global.ReactDOM = ReactDOM;
 
-MUICheckbox = require('material-ui/lib/checkbox');
-MUIRadioButton = require('material-ui/lib/radio-button');
-MUIRadioButtonGroup = require('material-ui/lib/radio-button-group');
-MUIDatePicker = require('material-ui/lib/date-picker/date-picker');
-RaisedButton = require('material-ui/lib/raised-button');
-FlatButton = require('material-ui/lib/flat-button');
-MUISelectField = require('material-ui/lib/select-field');
-MUITextField = require('material-ui/lib/text-field');
-MUIAutoComplete = require('material-ui/lib/auto-complete');
+import MUICheckbox from 'material-ui/lib/checkbox';
+import MUIRadioButton from 'material-ui/lib/radio-button';
+import MUIRadioButtonGroup from 'material-ui/lib/radio-button-group';
+import MUIDatePicker from 'material-ui/lib/date-picker/date-picker';
+import RaisedButton from 'material-ui/lib/raised-button';
+import FlatButton from 'material-ui/lib/flat-button';
+import MUISelectField from 'material-ui/lib/select-field';
+import MUITextField from 'material-ui/lib/text-field';
+import MUIAutoComplete from 'material-ui/lib/auto-complete';
