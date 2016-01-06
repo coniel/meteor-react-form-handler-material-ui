@@ -13,10 +13,7 @@ AutoCompleteInput = React.createClass({
     _onChange(value) {
         FormHandler.inputChanged(this.props.formId, this.props.name, value);
         if (this.props.onChange) {
-            console.log("has on change");
             this.props.onChange(value);
-        } else {
-            console.log("no on change");
         }
     },
     render: function() {

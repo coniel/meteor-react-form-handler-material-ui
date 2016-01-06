@@ -21,9 +21,15 @@ SubmitButton = React.createClass({
 			containerStyle.float = 'right';
 		}
 
+		let isPrimary = true;
+
+		if (this.props.secondary) {
+			isPrimary = false;
+		}
+
         return (
             <span style={containerStyle}>
-                <MUIComponents.RaisedButton  primary={true} {...this.props} label={label} type="submit" style={buttonStyle} />
+                <MUIComponents.RaisedButton primary={isPrimary} {...this.props} label={label} type="submit" style={buttonStyle} />
             </span>
         )
     }

@@ -1,5 +1,3 @@
-console.log(MUIComponents);
-
 TextInput = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
