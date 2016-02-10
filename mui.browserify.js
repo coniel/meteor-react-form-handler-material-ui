@@ -13,14 +13,14 @@ import MUITextField from 'material-ui/lib/text-field';
 import MUIAutoComplete from 'material-ui/lib/auto-complete';
 
 MUIComponents = {
-    Checkbox: MUICheckbox.default,
-    RadioButton: MUIRadioButton.default,
-    RadioButtonGroup: MUIRadioButtonGroup.default,
-    DatePicker: MUIDatePicker.default,
-    RaisedButton: MUIRaisedButton.default,
-    FlatButton: MUIFlatButton.default,
-    SelectField: MUISelectField.default,
-    MenuItem: MUIMenuItem.default,
-    TextField: MUITextField.default,
-    AutoComplete: MUIAutoComplete.default
+    Checkbox: MUICheckbox,
+    RadioButton: MUIRadioButton,
+    RadioButtonGroup: MUIRadioButtonGroup,
+    DatePicker: MUIDatePicker,
+    RaisedButton: MUIRaisedButton,
+    FlatButton: MUIFlatButton,
+    SelectField: MUISelectField,
+    MenuItem: MUIMenuItem,
+    TextField: MUITextField,
+    AutoComplete: MUIAutoComplete
 };
