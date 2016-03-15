@@ -191,7 +191,7 @@
       }
     },
     "material-ui": {
-      "version": "0.14.3",
+      "version": "0.14.4",
       "dependencies": {
         "inline-style-prefixer": {
           "version": "0.6.7",
@@ -200,6 +200,9 @@
               "version": "1.0.0"
             }
           }
+        },
+        "lodash.flowright": {
+          "version": "3.2.1"
         },
         "lodash.merge": {
           "version": "3.3.2",
@@ -228,7 +231,7 @@
               "version": "3.9.1"
             },
             "lodash.isarguments": {
-              "version": "3.0.5"
+              "version": "3.0.6"
             },
             "lodash.isarray": {
               "version": "3.0.4"
@@ -242,7 +245,7 @@
               }
             },
             "lodash.istypedarray": {
-              "version": "3.0.3"
+              "version": "3.0.4"
             },
             "lodash.keys": {
               "version": "3.1.2"
