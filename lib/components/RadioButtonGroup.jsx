@@ -4,17 +4,33 @@ RadioButtonGroup = React.createClass({
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
         defaultValue: React.PropTypes.string
     },
+    getInitialState() {
+        return {
+            value: this.props.defaultValue
+        }
+    },
     componentWillMount() {
-        FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        if (this.props.formId) {
+            FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        }
     },
     _onChange: function (event, selected) {
-        FormHandler.inputChanged(this.props.formId, this.props.name, selected);
+        if (this.props.formId) {
+            FormHandler.inputChanged(this.props.formId, this.props.name, selected);
+        }
+
+        this.setState({
+            value: selected
+        });
     },
     render: function () {
         return (
-            <MUIComponents.RadioButtonGroup name={this.props.name} defaultSelected={this.props.defaultValue} onChange={this._onChange}>
-                {this.props.children}
-            </MUIComponents.RadioButtonGroup>
+            <div>
+                <MUIComponents.RadioButtonGroup name={this.props.name} defaultSelected={this.props.defaultValue} onChange={this._onChange}>
+                    {this.props.children}
+                </MUIComponents.RadioButtonGroup>
+                <input type="hidden" name={this.props.name} value={this.state.value} />
+            </div>
         )
     }
 });

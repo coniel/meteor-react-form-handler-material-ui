@@ -8,7 +8,9 @@ TextArea = React.createClass({
         ])
     },
     componentWillMount() {
-        FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        if (this.props.formId) {
+            FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        }
     },
     _onChange(event) {
 
@@ -17,7 +19,9 @@ TextArea = React.createClass({
         if (this.props.type === "number") {
             value = parseFloat(value);
         }
-        FormHandler.inputChanged(this.props.formId, this.props.name, value);
+        if (this.props.formId) {
+            FormHandler.inputChanged(this.props.formId, this.props.name, value);
+        }
     },
     render: function() {
         return (

@@ -14,13 +14,17 @@ Select = React.createClass({
         }
     },
     componentWillMount() {
-        FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        if (this.props.formId) {
+            FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        }
     },
     _onChange(event, index, value) {
         this.setState({
             value: value
         });
-        FormHandler.inputChanged(this.props.formId, this.props.name, value);
+        if (this.props.formId) {
+            FormHandler.inputChanged(this.props.formId, this.props.name, value);
+        }
     },
     render: function () {
 
@@ -45,6 +49,7 @@ Select = React.createClass({
                 <MUIComponents.SelectField {...this.props} fullWidth={true} onChange={this._onChange} floatingLabelText={this.props.label} hintText={this.props.placeholder} placeholder={null} errorText={this.props.errorText} value={this.state.value}>
                     {options}
                 </MUIComponents.SelectField>
+                <input type="hidden" name={this.props.name} value={this.state.value} />
             </div>
         )
     }

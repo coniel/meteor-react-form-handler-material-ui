@@ -8,10 +8,14 @@ AutoCompleteInput = React.createClass({
         ])
     },
     componentWillMount() {
-        FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        if (this.props.formId) {
+            FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        }
     },
     _onChange(value) {
-        FormHandler.inputChanged(this.props.formId, this.props.name, value);
+        if (this.props.formId) {
+            FormHandler.inputChanged(this.props.formId, this.props.name, value);
+        }
         if (this.props.onChange) {
             this.props.onChange(value);
         }

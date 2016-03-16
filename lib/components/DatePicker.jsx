@@ -10,7 +10,9 @@ DatePicker = React.createClass({
         }
     },
     componentWillMount() {
-        FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        if (this.props.formId) {
+            FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        }
     },
     componentWillReceiveProps(nextProps) {
         this.setState({
@@ -18,7 +20,9 @@ DatePicker = React.createClass({
         });
     },
     _onChange(event, date) {
-        FormHandler.inputChanged(this.props.formId, this.props.name, date);
+        if (this.props.formId) {
+            FormHandler.inputChanged(this.props.formId, this.props.name, date);
+        }
         this.setState({
             value: date
         });
@@ -27,6 +31,7 @@ DatePicker = React.createClass({
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
                 <MUIComponents.DatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} floatingLabelText={this.props.label} placeholder={null} errorText={this.props.errorText} value={this.state.value} />
+                <input type="hidden" name={this.props.name} value={this.state.value} />
             </div>
         )
     }

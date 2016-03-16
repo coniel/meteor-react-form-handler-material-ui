@@ -5,10 +5,14 @@ Checkbox = React.createClass({
         defaultValue: React.PropTypes.bool
     },
     componentWillMount() {
-        FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        if (this.props.formId) {
+            FormHandler.initializeInput(this.props.formId, this.props.name, this.props.defaultValue);
+        }
     },
     _onCheck: function (event, checked) {
-        FormHandler.inputChanged(this.props.formId, this.props.name, checked);
+        if (this.props.formId) {
+            FormHandler.inputChanged(this.props.formId, this.props.name, checked);
+        }
     },
     render: function() {
         return (
