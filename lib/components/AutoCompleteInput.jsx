@@ -1,5 +1,6 @@
 import React from 'react';
 import MUIAutoComplete from 'material-ui/AutoComplete';
+import { AvailableFormLayoutStyles } from 'react-ss-form-handler';
 
 const AutoCompleteInput = React.createClass({
     propTypes: {

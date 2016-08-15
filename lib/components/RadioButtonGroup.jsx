@@ -1,5 +1,6 @@
 import React from 'react';
 import {RadioButtonGroup as MUIRadioButtonGroup} from 'material-ui/RadioButton';
+import { AvailableFormLayoutStyles } from 'react-ss-form-handler';
 
 const RadioButtonGroup = React.createClass({
     propTypes: {

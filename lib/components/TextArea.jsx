@@ -1,5 +1,6 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
+import { AvailableFormLayoutStyles } from 'react-ss-form-handler';
 
 const TextArea = React.createClass({
     propTypes: {

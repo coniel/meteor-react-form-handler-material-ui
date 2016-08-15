@@ -1,5 +1,6 @@
 import React from 'react';
 import MUICheckbox from 'material-ui/Checkbox';
+import { AvailableFormLayoutStyles } from 'react-ss-form-handler';
 
 const Checkbox = React.createClass({
     propTypes: {
