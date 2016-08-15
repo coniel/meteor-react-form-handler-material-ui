@@ -1,6 +1,9 @@
+import React from 'react';
+import TextField from 'material-ui/TextField';
+
 var typingTimer;
 
-TextInput = React.createClass({
+const TextInput = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -53,20 +56,33 @@ TextInput = React.createClass({
         }
     },
     render: function() {
+
+        let style = this.props.style || {};
+
+        if (this.props.layoutStyle) {
+            _.extend(style, FormLayoutStyles[this.props.layoutStyle]);
+        }
+
         return (
-            <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIComponents.TextField
+            <div style={style}>
+                <TextField
                     fullWidth={true}
                     onChange={this._onChange}
-                    {...this.props}
+                    name={this.props.name}
                     placeholder={null}
+                    type={(this.props.type)? this.props.type : 'text'}
                     hintText={this.props.placeholder}
                     floatingLabelText={this.props.label}
                     errorText={this.props.errorText}
                     onKeyDown={this._onKeyDown}
                     onKeyUp={this._onKeyUp}
+                    inputStyle={this.props.inputStyle}
+                    hintStyle={this.props.hintStyle}
+                    underlineShow={this.props.underlineShow}
                 />
             </div>
         )
     }
 });
+
+export default TextInput;

@@ -1,4 +1,7 @@
-Checkbox = React.createClass({
+import React from 'react';
+import MUICheckbox from 'material-ui/Checkbox';
+
+const Checkbox = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -17,8 +20,10 @@ Checkbox = React.createClass({
     render: function() {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIComponents.Checkbox ref="checkbox" {...this.props} defaultChecked={this.props.defaultValue} value={this.props.name} onCheck={this._onCheck} />
+                <MUICheckbox ref="checkbox" {...this.props} defaultChecked={this.props.defaultValue} value={this.props.name} onCheck={this._onCheck} />
             </div>
         )
     }
 });
+
+export default Checkbox;

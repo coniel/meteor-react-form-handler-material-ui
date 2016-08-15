@@ -1,4 +1,7 @@
-AutoCompleteInput = React.createClass({
+import React from 'react';
+import MUIAutoComplete from 'material-ui/AutoComplete';
+
+const AutoCompleteInput = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -37,8 +40,10 @@ AutoCompleteInput = React.createClass({
 
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIComponents.AutoComplete fullWidth={true} autoComplete="off" onUpdateInput={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} dataSource={options} floatingLabelText={this.props.label} errorText={this.props.errorText} />
+                <MUIAutoComplete fullWidth={true} autoComplete="off" onUpdateInput={this._onChange} {...this.props} placeholder={null} hintText={this.props.placeholder} dataSource={options} floatingLabelText={this.props.label} errorText={this.props.errorText} />
             </div>
         )
     }
 });
+
+export default AutoCompleteInput;

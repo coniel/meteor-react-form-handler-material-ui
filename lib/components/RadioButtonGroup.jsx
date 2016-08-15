@@ -1,4 +1,7 @@
-RadioButtonGroup = React.createClass({
+import React from 'react';
+import {RadioButtonGroup as MUIRadioButtonGroup} from 'material-ui/RadioButton';
+
+const RadioButtonGroup = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -26,11 +29,13 @@ RadioButtonGroup = React.createClass({
     render: function () {
         return (
             <div>
-                <MUIComponents.RadioButtonGroup name={this.props.name} defaultSelected={this.props.defaultValue} onChange={this._onChange}>
+                <MUIRadioButtonGroup name={this.props.name} defaultSelected={this.props.defaultValue} onChange={this._onChange}>
                     {this.props.children}
-                </MUIComponents.RadioButtonGroup>
+                </MUIRadioButtonGroup>
                 <input type="hidden" name={this.props.name} value={this.state.value} />
             </div>
         )
     }
 });
+
+export default RadioButtonGroup;

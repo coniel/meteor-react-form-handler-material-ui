@@ -1,4 +1,7 @@
-DatePicker = React.createClass({
+import React from 'react';
+import MUIDatePicker from 'material-ui/DatePicker';
+
+const DatePicker = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -30,9 +33,11 @@ DatePicker = React.createClass({
     render: function () {
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIComponents.DatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} floatingLabelText={this.props.label} placeholder={null} errorText={this.props.errorText} value={this.state.value} />
+                <MUIDatePicker ref="datepicker" fullWidth={true} onChange={this._onChange} {...this.props} floatingLabelText={this.props.label} placeholder={null} errorText={this.props.errorText} value={this.state.value} />
                 <input type="hidden" name={this.props.name} value={this.state.value} />
             </div>
         )
     }
 });
+
+export default DatePicker;

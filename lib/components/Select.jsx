@@ -1,4 +1,8 @@
-Select = React.createClass({
+import React from 'react';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
+
+const Select = React.createClass({
     propTypes: {
         name: React.PropTypes.string.isRequired,
         layoutStyle: React.PropTypes.oneOf(AvailableFormLayoutStyles),
@@ -33,24 +37,26 @@ Select = React.createClass({
         if (this.props.useAllowedValues) {
             if (this.props.allowedValues) {
                 this.props.allowedValues.map((value) => {
-                    options.push(<MUIComponents.MenuItem key={value} value={value} primaryText={value} />);
+                    options.push(<MenuItem key={value} value={value} primaryText={value} />);
                 });
             } else {
                 console.error("Select input " + this.props.name + " has useAllowedValues but does not have any allowedValues");
             }
         } else {
             this.props.options.map((option) => {
-                options.push(<MUIComponents.MenuItem key={option.value} value={option.value} primaryText={option.label} />);
+                options.push(<MenuItem key={option.value} value={option.value} primaryText={option.label} />);
             });
         }
 
         return (
             <div style={FormLayoutStyles[this.props.layoutStyle]}>
-                <MUIComponents.SelectField {...this.props} fullWidth={true} onChange={this._onChange} floatingLabelText={this.props.label} hintText={this.props.placeholder} placeholder={null} errorText={this.props.errorText} value={this.state.value}>
+                <SelectField {...this.props} fullWidth={true} onChange={this._onChange} floatingLabelText={this.props.label} hintText={this.props.placeholder} placeholder={null} errorText={this.props.errorText} value={this.state.value}>
                     {options}
-                </MUIComponents.SelectField>
+                </SelectField>
                 <input type="hidden" name={this.props.name} value={this.state.value} />
             </div>
         )
     }
 });
+
+export default Select;
