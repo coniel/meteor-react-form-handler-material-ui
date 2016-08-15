@@ -1,6 +1,6 @@
 {
   "name": "react-ss-form-handler-material-ui",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Material UI components for react-ss-form-handler",
   "files": [
     "dist"
