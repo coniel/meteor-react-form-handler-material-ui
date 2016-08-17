@@ -1,6 +1,6 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
-import { AvailableFormLayoutStyles, FormHandler } from 'react-ss-form-handler';
+import { AvailableFormLayoutStyles, FormLayoutStyles, FormHandler } from 'react-ss-form-handler';
 
 const SubmitButton = React.createClass({
     render: function() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import { AvailableFormLayoutStyles, FormHandler } from 'react-ss-form-handler';
+import { AvailableFormLayoutStyles, FormLayoutStyles, FormHandler } from 'react-ss-form-handler';
 
 const FormActions = React.createClass({
     render: function() {

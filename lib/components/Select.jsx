@@ -1,7 +1,7 @@
 import React from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import { AvailableFormLayoutStyles, FormHandler } from 'react-ss-form-handler';
+import { AvailableFormLayoutStyles, FormLayoutStyles, FormHandler } from 'react-ss-form-handler';
 
 const Select = React.createClass({
     propTypes: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import MUIDatePicker from 'material-ui/DatePicker';
-import { AvailableFormLayoutStyles, FormHandler } from 'react-ss-form-handler';
+import { AvailableFormLayoutStyles, FormLayoutStyles, FormHandler } from 'react-ss-form-handler';
 
 const DatePicker = React.createClass({
     propTypes: {
